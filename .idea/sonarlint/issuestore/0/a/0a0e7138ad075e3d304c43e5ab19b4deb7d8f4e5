@@ -1,0 +1,7 @@
+
+`squid:S2583;"DChange this condition so that it does not always evaluate to "false"(Ûáúÿÿÿÿ
+csquid:S00112F"FDefine and throw a dedicated exception instead of using a generic one.(ĞÕÓûÿÿÿÿ
+Ysquid:S1163F"=Refactor this code to not throw exceptions in finally blocks.(ĞÕÓûÿÿÿÿ
+csquid:S00112@"FDefine and throw a dedicated exception instead of using a generic one.(ç»ùüÿÿÿÿ
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(è×ñ¼ûÿÿÿÿ
+Psquid:S1143F"4Remove this throw statement from this finally block.(ĞÕÓûÿÿÿÿ

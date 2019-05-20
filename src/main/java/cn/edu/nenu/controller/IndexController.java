@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
     @RequestMapping("")
     public String list(Model model){
+        System.out.println("indexController.class");
         return "index";
     }
+
 }

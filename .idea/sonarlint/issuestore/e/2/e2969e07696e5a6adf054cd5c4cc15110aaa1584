@@ -1,0 +1,9 @@
+
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(Õá¡ü
+Dsquid:S1604"(Make this anonymous inner class a lambda(ÄÞ“ýÿÿÿÿÿ
+Csquid:S1172I",Remove this unused method parameter "clazz".(êÇëé
+isquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(çã†Ê
+Dsquid:S1604J"(Make this anonymous inner class a lambda(ÄÞ“ýÿÿÿÿÿ
+P"squid:SwitchLastCaseIsDefaultCheck(""Add a default case to this switch.(¢‘¡Ã
+Isquid:S1172"2Remove this unused method parameter "entityClazz".(çã†Ê
+P"squid:SwitchLastCaseIsDefaultCheckV""Add a default case to this switch.(¢‘¡Ã
