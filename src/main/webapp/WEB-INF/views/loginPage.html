@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<title>登录-大学生竞赛信息网</title>
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+		<script th:src="@{/js/login.js}" src="../static/js/login.js"></script>
+		<style>
+            .denglu{
+                width: 806px;
+                height: 500px;
+                border: 1px solid #5517C3;
+                box-shadow: 0 0 20px #5517C3;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .zuo{
+                float: left;
+                width: 500px;
+                height: 498px;
+                display: inline-block;
+            }
+            .you{
+                float: right;
+                width: 300px;
+                height: 498px;
+                background-color: #5517C3;
+                display: inline-block;
+            }
+            .search_text1{
+                color: white;
+            }
+            .search_text2{
+                color: white;
+            }
+
+		</style>
+
+	</head>
+	<body>
+		<div class="denglu">
+					<div class="zuo">
+						<div style="margin: 40px;">
+				<p style="color: #5517C3;font-size: 4rem;text-align: center;font-family:华文行楷;">CT大学生竞赛信息网</p>
+			</div>
+			<img src="../static/img/输入密码.png" th:src="@{/img/输入密码.png}" style="width: 100%;"/>
+					</div>
+					<div class="you">
+						<div style="width: 100%;height: 150px;padding: 100px 80px 50px 80px;">
+							<p style="float: left;font-size: 2rem;color:white">登录</p>
+							<a href="registerPage.html" th:href="@{/home/userRegister}"><p style="float: right;font-size: 2rem;color: #cb8cea;">注册</p></a>
+						</div>
+						<form  action="#" th:action="@{/home/login}"  method="post" >
+						<div style="height: 40px; background-color: #8261e0;border-radius: 20px 20px 20px 20px;margin: 0 30px 20px 30px;">
+							<img src="../static/img/unLoginHeadImg.png" th:src="@{/img/unLoginHeadImg.png}" style="width: 15%;"/>
+							<input type="text" placeholder="请输入手机号" name="userName"  class="search_text1" style="display: inline-block;border: 0;background-color: #8261e0;margin-top: 5px;color: white;"/>
+							
+						</div>
+						<div style="height: 40px; background-color: #8261e0;border-radius: 20px 20px 20px 20px;margin: 0 30px 20px 30px;">
+                                <img src="../static/img/登录密码.png" th:src="@{/img/登录密码.png}" style="width: 18%;"/>
+							<input type="password" placeholder="请输入密码" name="userPwd"  class="search_text2" style="display: inline-block;border: 0;background-color: #8261e0;width: 160px;margin-top: 5px;"/>
+							<img src="../static/img/密码眼睛白色.png" th:src="@{/img/密码眼睛白色.png}" style="width: 10%;display: inline-block;"/>
+							
+						</div>
+						<div style="height: 20px; margin: 0 30px 20px 100px;">
+							<a href="registerPage.html" style="color: white;">新用户，注册</a>
+						</div>
+						<div style="height: 40px; background-color: white;border-radius: 20px 20px 20px 20px;margin: 0 30px 20px 30px;padding-left:90px; ">
+							<input type="submit" value="登录" onclick="r();" style="text-align: center;color: #822fab;font-size: 2rem;padding-top: 5px;border: 0;background-color: white;"/>
+							
+						</div>
+                        </form>
+						<img src="../static/img/圈粉色.png"  th:src="@{/img/圈粉色.png}"style="position: absolute;top: 400px;left: 700px;width: 10%;"/>
+						<img src="../static/img/三角白色.png"  th:src="@{/img/三角白色.png}"style="position: absolute;top: 15px;left: 700px; width: 8%;"/>
+						<img src="../static/img/正方形淡紫.png"  th:src="@{/img/正方形淡紫.png}" style="position: absolute;top: 10px;left: 550px; width: 8%;"/>
+					</div>
+			</div>
+	</body>
+</html>

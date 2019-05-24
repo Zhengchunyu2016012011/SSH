@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<title>大学生竞赛信息网</title>
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="../static/css/personal.css" rel="stylesheet" th:href="@{/css/personal.css}">
+   		<script type="text/javascript">
+    function imgPreview(fileDom){
+        //判断是否支持FileReader
+        if (window.FileReader) {
+            var reader = new FileReader();
+        } else {
+            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+        }
+
+        //获取文件
+        var file = fileDom.files[0];
+        var imageType = /^image\//;
+        //是否是图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        //读取完成
+        reader.onload = function(e) {
+            //获取图片dom
+            var img = document.getElementById("preview");
+            //图片路径设置为读取的图片
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+</script>
+	</head>
+	<body>
+		<div class="ding" th:style="'background: url('+@{/img/页面顶部背景.png}+') no-repeat;background-size: 100%;height: 200px;'">
+			
+			<img src="../img/两人信息.png" th:src="@{/img/两人信息.png}" style="width: 14%;margin-left: 100px;float: left;" />
+			<div class="tou" style="float: right;margin-right: 100px;width: 500px;">
+				<div class="guanz" style="display: inline-block;color: white;margin-top: 40px;float: right;margin-left: 10px;">
+					<a href="concernPage.html" th:href="@{/userConcern}" target="_blank" class="gz" style="color: white;font-size: 1.5rem;">关注</a>
+				</div>
+				<img src="../img/未登录头像02.png" th:src="@{/img/未登录头像02.png}" class="img-responsive" style="width:7%;display: inline-block;margin-top: 30px;float: right;"/>
+
+                <div class="dl" style="display: inline-block;color: white;margin-top: 40px;float: right;margin-right: 10px;">
+                    <a href="loginPage.html" th:href="@{/home/logout}" th:if="${session.userIfo}" target="_blank" class="dl1" style="color: white;font-size: 1.5rem;">注销</a>
+                    <a href="loginPage.html" th:href="@{/home/userLogin}" th:if="${session.userIfo}==null" target="_blank" class="dl1" style="color: white;font-size: 1.5rem;">登录</a>
+                </div>
+			</div>
+		</div>
+		
+		<div class="timu">
+			<p style="font-family:华文行楷;color: #5517c3;font-size:5rem;text-align: center;">我的信息</p>
+		</div>
+		<div class="zhongjian" style="margin: 0 30% 0 30%;height: 300px;">
+			<div class="zuobian" style="width: 200px;height: 300px;display: inline-block;float: left;">
+				<p style="font-family:华文行楷;color: #5517c3;font-size:4rem;text-align: center;">头像</p>
+				
+				<div style="width: 150px;height: 150px;margin: 0 25px 0 25px;">
+					<img id="preview" style="width: 150px;height: 150px;"/>
+				</div>
+				<br />
+				<input type="file" name="file" onchange="imgPreview(this)"  style="margin-left: 25px;"/>
+			</div>
+			<div class="youbian" style="display: inline-block;float: right;">
+				<div class="gainicheng" style="width: 360px; height: 100px;margin-top: 25px;">
+					<div class="sousuok" style="background: url(img/shurukuang.png) no-repeat;height: 55px;width: 300px; display: inline-block;float: left;"
+						th:style="'background: url('+@{/img/shurukuang.png}+') no-repeat;height: 55px;width: 300px; display: inline-block;float: left;'">
+						<input type="text" placeholder="请输入昵称" class="search_text" style="display: inline-block;margin-top: 8px;margin-left: 20px;width: 200px;"/>			
+					</div>
+					<label style="display: inline-block;float: right;padding-top: 10px;color: #5517C3;">更改昵称</label>
+				</div>
+				
+				<div class="gaimima" style="width: 360px; height: 100px;">
+					<div class="sousuok" style="background: url(img/shurukuang.png) no-repeat;height: 55px;width: 300px; display: inline-block;float: left;"
+					th:style="'background: url('+@{/img/shurukuang.png}+') no-repeat;height: 55px;width: 300px; display: inline-block;float: left;'">
+						<input type="text" placeholder="请输入新的密码" class="search_text" style="display: inline-block;margin-top: 8px;margin-left: 20px;width: 200px;"/>			
+						<img src="../img/密码眼睛紫色.png" th:src="@{/img/密码眼睛紫色.png}" style="width: 25%;display: inline-block;float: right;"/>
+					</div>
+					<label style="display: inline-block;float: right;padding-top: 10px;color: #5517C3;">更改密码</label>
+				</div>
+				
+				<div class="gaiyouxiang" style="width: 360px; height: 100px;">
+					<div class="sousuok" style="background: url(img/shurukuang.png) no-repeat;height: 55px;width: 300px; display: inline-block;float: left;"
+                         th:style="'background: url('+@{/img/shurukuang.png}+') no-repeat;height: 55px;width: 300px; display: inline-block;float: left;'">
+						<input type="text" placeholder="请输入新的邮箱" class="search_text" style="display: inline-block;margin-top: 8px;margin-left: 20px;width: 200px;"/>			
+					</div>
+					<label style="display: inline-block;float: right;padding-top: 10px;color: #5517C3;">更改邮箱</label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="baocun" style="margin: 100px 47% 0 47%;">
+			<input type="submit" value="保存更改" style="text-align: center;color:white;font-size: 2rem;padding-top: 5px;border: 0;background-color: #5517C3;"/>
+			</div>
+		
+		
+		<div class="di" style="background: url(img/页面底部背景1.png) no-repeat;background-size: 100%;height: 100px;margin: 130px 0 0 0;padding: 0;"
+		 th:style="'background: url('+@{/img/页面底部背景1.png}+') no-repeat;background-size: 100%;height: 100px;margin: 130px 0 0 0;padding: 0;'">
+			<img src="../img/一人abc.png" th:src="@{/img/一人abc.png}" style="position: absolute;top:820px;left: 80%;width: 10%;"/>
+		<p style="text-align: center;color: white;;font-size: 1rem;margin-bottom:0;padding-top: 70px;">版权所有@2019yangy保留所有权利</p>
+		</div>
+	</body>
+</html>

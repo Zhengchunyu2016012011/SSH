@@ -1,0 +1,24 @@
+.nav li{
+			font-size: 1.5vw;
+			font-family: 汉仪旗黑-40s;
+			
+			padding-left: 30px;
+			padding-right: 30px;
+			height: 50px;
+			}
+.nav li a{
+	color:#FFFFFF;
+}
+
+.nav li a:visited{
+	background-color: #ff9e00;
+	outline: none;
+}
+.nav li a:hover{
+	background-color: #5517C3;
+	outline: none;
+}
+.nav li a:active{
+	background-color: #ff9e00;
+	outline: none;
+}
