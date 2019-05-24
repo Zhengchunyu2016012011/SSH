@@ -18,7 +18,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ArticleController {
     @Autowired
     ArticleService articleService;
-
+    @RequestMapping(value = "",method = RequestMethod.GET)
+    public String indexfirst(){
+        return "index";
+    }
     @RequestMapping(value = "/index.html",method = RequestMethod.GET)
      public String index(){
         return "index";

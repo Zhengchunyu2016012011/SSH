@@ -173,7 +173,7 @@
   </dependencies>
 
   <build>   <!--加入Tomcat插件方便发布到Tomcat中以及运行和调试-->
-    <finalName>ssh</finalName>
+    <finalName>SSH</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
